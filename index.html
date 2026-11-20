@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Click Counter</title>
+<style>
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: system-ui, sans-serif;
+    background: #f4f4f5;
+    color: #18181b;
+  }
+  button {
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 0.75rem;
+    background: #2563eb;
+    color: #fff;
+    cursor: pointer;
+  }
+  button:hover { background: #1d4ed8; }
+  button:active { transform: scale(0.97); }
+</style>
+</head>
+<body>
+  <button id="counter" type="button">Clicks: 0</button>
+  <script>
+    const btn = document.getElementById('counter');
+    let count = 0;
+    btn.addEventListener('click', () => {
+      count++;
+      btn.textContent = 'Clicks: ' + count;
+    });
+  </script>
+</body>
+</html>
